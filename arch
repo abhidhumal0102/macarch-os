@@ -1,0 +1,51 @@
+macarch-os/
+│
+├── README.md
+├── LICENSE
+├── build.sh
+├── profiledef.sh
+├── packages.x86_64
+│
+├── ci/
+│   └── github-actions-build.yml
+│
+├── calamares/
+│   ├── settings.conf
+│   └── modules/
+│
+├── plymouth/
+│   └── macarch-theme/
+│
+├── branding/
+│   ├── logo.svg
+│   ├── wallpaper.jpg
+│   └── splash.png
+│
+├── airootfs/
+│   │
+│   ├── etc/
+│   │   ├── hostname
+│   │   ├── modprobe.d/
+│   │   │   ├── nvidia.conf
+│   │   │   └── oled.conf
+│   │   │
+│   │   ├── sysctl.d/
+│   │   │   └── performance.conf
+│   │   │
+│   │   └── plymouth/
+│   │       └── plymouthd.conf
+│   │
+│   ├── usr/
+│   │   ├── share/
+│   │   │   ├── applications/
+│   │   │   │   └── install-macarch.desktop
+│   │   │   └── plymouth/
+│   │   │
+│   │   └── local/bin/
+│   │       └── macarch-welcome
+│   │
+│   └── root/
+│       ├── firstboot.sh
+│       ├── theme.sh
+│       ├── gestures.sh
+│       └── hardware-detect.sh
