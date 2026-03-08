@@ -1,0 +1,28 @@
+name: Build MacArch ISO
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install ArchISO
+      run: |
+        sudo apt update
+        sudo apt install archiso
+
+    - name: Build ISO
+      run: |
+        sudo mkarchiso -v .
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: macarch-iso
+        path: out/
